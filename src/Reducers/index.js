@@ -1,6 +1,4 @@
 import { combineReducers } from 'redux';
-import authReducer from './auth';
-import { routeReducer } from 'redux-simple-router';
 
 /**
  * The root reducer for this application.
@@ -10,6 +8,4 @@ import { routeReducer } from 'redux-simple-router';
  * @return {Object}
  */
 export default combineReducers({
-  auth: authReducer,
-  routing: routeReducer
 });
