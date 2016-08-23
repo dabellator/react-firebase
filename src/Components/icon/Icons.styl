@@ -1,0 +1,73 @@
+// *******************************************
+// *******************************************
+
+// Base icon styles
+
+// *******************************************
+// *******************************************
+
+.pp-icon
+  position: relative;
+  display: inline-block
+  width: em(25px)
+  height: em(25px)
+  background: transparent
+  fill: $black
+  pointer-events: none
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+// size modifiers
+  &.\\+x-small
+    width: em(10px)
+    height: em(10px)
+
+  &.\\+small
+    width: em(15px)
+    height: em(15px)
+
+  &.\\+medium
+    width: em(20px)
+    height: em(20px)
+
+  &.\\+large
+    width: em(35px)
+    height: em(35px)
+
+  &.\\+x-large
+    width: em(45px)
+    height: em(45px)
+
+// rotation modifiers
+  &.\\+rotate-45
+    transform: rotate(45deg)
+
+  &.\\+rotate-90
+    transform: rotate(90deg)
+
+  &.\\+rotate-180
+    transform: rotate(180deg)
+
+  &.\\+rotate-270
+    transform: rotate(270deg)
+
+// color modifiers
+  &.\\+black
+    fill: $black
+
+  &.\\+white
+    fill: $white
+
+  &.\\+primary
+    fill: $primary
+
+  &.\\+secondary
+    fill: $secondary
+
+  &.\\+tertiary
+    fill: $tertiary

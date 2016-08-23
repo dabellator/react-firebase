@@ -1,0 +1,41 @@
+// *******************************************
+// *******************************************
+
+// Icon formatting for styleguide section
+
+// *******************************************
+// *******************************************
+
+.pl-icons {
+  @include clearfix;
+}
+
+.pl-icon {
+  position: relative;
+  height: em(100px);
+  margin: 0;
+  display: inline-block;
+  background: $gray--300;
+  border: 1px solid $gray--400;
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: em(-6px);
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+.pl-icon__name {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: em(6px) em(3px);
+  display: block;
+  font-size: em(11px);
+  background: $gray--300;
+  border-top: 1px solid $gray--400;
+}
