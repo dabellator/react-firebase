@@ -1,10 +1,3 @@
-/**
- * Calculates the user's current authenticated state.
- *
- * @param  {Object} state
- * @param  {Object} action
- * @return {Object}
- */
 export default function (state = {}, action) {
   let newState;
 

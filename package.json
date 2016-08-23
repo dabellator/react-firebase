@@ -1,7 +1,7 @@
 {
-  "name": "helpfulhuman-react-boilerplate",
-  "version": "2.0.0",
-  "description": "A React project boilerplate for Helpful Human.",
+  "name": "studio-hq",
+  "version": "0.0.1",
+  "description": "A dance studio management application.",
   "main": "build/app.js",
   "scripts": {
     "test": "mocha",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HelpfulHuman/React-Project.git"
+    "url": "git+https://canfie1d@bitbucket.org/helpfulhuman/studiohq.git"
   },
   "author": "Nick Glenn <nick@helpfulhuman.com>",
   "license": "MIT",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/HelpfulHuman/React-Project#readme",
   "dependencies": {
+    "classnames": "^2.2.5",
     "history": "^1.17.0",
     "portals": "^0.1.3",
     "react": "^0.14.3",
