@@ -27,7 +27,8 @@ var config = {
     new webpack.DefinePlugin({
       // inject "env" as a global variable
       env: JSON.stringify({
-        API_HOST: process.env.API_HOST || null
+        API_HOST: process.env.API_HOST || null,
+        ENVIRONMENT: process.env.ENVIRONMENT || null
       })
     })
   ]

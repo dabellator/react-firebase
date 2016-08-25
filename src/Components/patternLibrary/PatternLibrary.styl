@@ -60,12 +60,7 @@ $pl-header-height= em(64px);
   width: em(64px);
   cursor: pointer;
   padding: em(19px);
-
-  .icon {
-    position: absolute;
-    top: em(6px); // hack b/c icons won't align properly ¯\_(ツ)_/¯ Should be em(19px)
-    left: em(19px);
-  }
+  line-height: 0;
 
   @media screen and (min-width: 640px) {
     display: none;
@@ -81,7 +76,7 @@ $pl-header-height= em(64px);
   z-index: 10;
   width: $pl-sidebar-width;
   height: 100%;
-  padding: em(30px);
+  padding: em(84px) em(30px) em(30px);
   background: $white;
   border-right: 1px solid $gray--300;
   transition: 200ms left $ease-in-out-back;
@@ -92,7 +87,7 @@ $pl-header-height= em(64px);
   }
 
   @media screen and (min-width: 640px) {
-    left: 0;
+    padding: em(30px);
     box-shadow: none;
 
     &.pl-sidebar--hidden {

@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
+import { browserHistory } from 'react-router'
 
 class PLDrawerMenuItem extends React.Component {
 
@@ -17,7 +18,6 @@ class PLDrawerMenuItem extends React.Component {
     active: false,
     displayName: ''
   }
-
   onClick() {
     if (this.props.displayName) {
       this.context.router.push(`/pattern-library/${this.props.displayName}`);
@@ -29,19 +29,20 @@ class PLDrawerMenuItem extends React.Component {
   render() {
     let display;
 
-    const linkClasses = classNames({
-      'pl-nav__menu-link': true,
-      'pl-nav__menu-link--is-current': this.props.active,
-    });
+    const linkClasses = [
+      'pl-nav__menu-link',
+      this.props.active ? 'pl-nav__menu-link--is-current' : null
+    ];
 
     if (this.props.children) {
       display = this.props.children;
     } else {
       display = this.props.displayName;
     }
+
     return (
       <li className="pl-nav__menu-item">
-        <a className={linkClasses} onClick={this.onClick}>
+        <a className={classNames(linkClasses)} onClick={this.onClick.bind(this)}>
           {display}
         </a>
       </li>

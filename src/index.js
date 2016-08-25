@@ -9,14 +9,16 @@ import { isLoggedIn, isGuest } from './Services/AuthMiddleware';
 // contexts
 import App from './Containers/App';
 import HomePage from './Containers/Home';
-import PatternLibraryPage from './Components/patternLibrary/PatternLibrary';
+import PatternLibraryPage from './Components/patternLibrary/PatternLibraryContainer';
 
 function getEnvironmentDependentRoutes() {
   let routes = [];
 
   if (env.ENVIRONMENT !== 'prod') {
     routes = routes.concat([
-      <Route key='pattern-library-section' path="/pattern-library/:section"
+      <Route
+        key='pattern-library-section'
+        path="/pattern-library/:section"
         component={PatternLibraryPage}
       />,
       <Redirect key='pattern-library-all' from="/pattern-library" to="/pattern-library/all" />

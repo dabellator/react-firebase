@@ -2,7 +2,8 @@ import React from 'react';
 
 class Typography extends React.Component {
 
-  displayName= 'Typography';
+  static displayName= 'Typography';
+
   render() {
     return (
       <div className="pl-page">

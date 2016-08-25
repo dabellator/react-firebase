@@ -56,7 +56,7 @@ The client folder houses the client application for your project.  This is where
 
 ### test/
 
-Your unit and integration tests for components, reducers and services.  It is not really necessary to test action creators or contexts (unless you really want to).
+Your unit and integration tests for components, reducers and services.  It is not really necessary to test action creators or containers (unless you really want to).
 
 ## App Components
 
@@ -96,9 +96,9 @@ render () {
 }
 ```
 
-### Contexts
+### Containers
 
-Contexts allow you to hook up "dumb" components to your Redux state model.  This is essentially the glue between your state model and presentation logic.
+Containers allow you to hook up "dumb" components to your Redux state model.  This is essentially the glue between your state model and presentation logic.
 
 ### Reducers
 

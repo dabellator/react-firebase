@@ -3,7 +3,7 @@ import DrawerMenu from './DrawerMenu';
 
 import TypographySection from './sections/Typography';
 import IconSection from './sections/Icons';
-import GridLayout from './sections/Grid';
+import GridSection from './sections/Grid';
 import Icon from '../icon/Icon';
 
 class PatternLibrary extends React.Component {
@@ -31,7 +31,7 @@ class PatternLibrary extends React.Component {
     return [
       TypographySection,
       IconSection,
-      GridLayout
+      GridSection
     ];
   }
 
