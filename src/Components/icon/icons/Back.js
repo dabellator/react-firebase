@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Cancel () {
+function Back () {
   /* eslint-disable max-len */
   return (
     <svg viewBox="0 0 25 25" version="1.1">
@@ -10,4 +10,4 @@ function Cancel () {
   /* eslint-enable */
 }
 
-export default Cancel;
+export default Back;

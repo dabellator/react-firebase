@@ -11,18 +11,19 @@ class PLDrawerMenuItem extends React.Component {
   }
 
   contextTypes: {
-    router: React.PropTypes.object.isRequired,
+    router: React.PropTypes.func.isRequired,
   }
 
   static defaultProps = {
     active: false,
     displayName: ''
   }
+
   onClick() {
     if (this.props.displayName) {
-      this.context.router.push(`/pattern-library/${this.props.displayName}`);
+      browserHistory.push(`/pattern-library/${this.props.displayName}`);
     } else {
-      this.context.router.push('/pattern-library');
+      browserHistory.push('/pattern-library');
     }
   }
 

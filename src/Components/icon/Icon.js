@@ -50,7 +50,7 @@ class Icon extends React.Component {
     const rotationClass = `+rotate-${this.props.rotate}`;
     /* eslint-enable */
     const classes = [
-      'pp-icon',
+      'icon',
       this.props.size ? sizeClass : null,
       colorClass,
       this.props.rotate ? rotationClass : null,

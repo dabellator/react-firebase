@@ -17,7 +17,7 @@ class Icons extends React.Component {
 
   renderIcons() {
     return map(ICONS, (icon, index) => (
-      <span className="pl-icon small-4 medium-3" key={`icon-${index}`}>
+      <span className="pl-icon" key={`icon-${index}`}>
         <Icon icon={icon} />
         <span className="pl-icon__name">
           <strong className="strong">Icon: </strong>
@@ -31,7 +31,9 @@ class Icons extends React.Component {
     return (
       <div className="pl-page">
         <h1 className="pl-h1">Icons</h1>
-        {this.renderIcons()}
+        <div className='pl-icons'>
+          {this.renderIcons()}
+        </div>
       </div>
     );
   }
