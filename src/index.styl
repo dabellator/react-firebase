@@ -1,12 +1,12 @@
 @require 'helpful-ui/zero'
 @require 'helpful-ui/elements'
+@require './base/*'
 
 // basic styles for things like typography and color
 body
-  font-family: 'Helvetica Neue', Arial, sans-serif
+  font-family: $roboto
 
 // load all component stylus files
-@require './base/*'
 @require './Components/*'
 @require './Components/*/*'
 @require './Components/*/*/*'
