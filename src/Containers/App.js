@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import App from '../Components/App';
 
+import { createUser, loginUser, checkUser, logOut } from '../Actions/Users';
+
 /**
  * Cherry pick values out of the given state model and choose which
  * ones to pass to the contextual component.
@@ -20,7 +22,18 @@ function mapStateToProps (state) {
  * @return {Object}
  */
 function mapDispatchToProps (dispatch) {
-  return {};
+  return {
+    createUser: (e) => {
+      e.preventDefault();
+      createUser(e.target.email.value, e.target.pass.value)
+    },
+    loginUser: (e) => {
+      e.preventDefault();
+      loginUser(e.target.email.value, e.target.pass.value)
+    },
+    checkUser: () => checkUser(),
+    logOut: () => logOut()
+  };
 }
 
 /**
