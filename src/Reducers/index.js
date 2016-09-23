@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { routeReducer } from 'redux-simple-router';
 import app from './app';
 
 /**
@@ -9,5 +10,6 @@ import app from './app';
  * @return {Object}
  */
 export default combineReducers({
-  app
+  app,
+  routing: routeReducer
 });

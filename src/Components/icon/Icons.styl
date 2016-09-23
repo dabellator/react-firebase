@@ -1,0 +1,73 @@
+// *******************************************
+// *******************************************
+
+// Base icon styles
+
+// *******************************************
+// *******************************************
+
+.icon
+  position: relative;
+  display: inline-block
+  width: em(25)
+  height: em(25)
+  background: transparent
+  fill: $black
+  pointer-events: none
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+// size modifiers
+  &.\\+x-small
+    width: em(10)
+    height: em(10)
+
+  &.\\+small
+    width: em(15)
+    height: em(15)
+
+  &.\\+medium
+    width: em(20)
+    height: em(20)
+
+  &.\\+large
+    width: em(35)
+    height: em(35)
+
+  &.\\+x-large
+    width: em(45)
+    height: em(45)
+
+// rotation modifiers
+  &.\\+rotate-45
+    transform: rotate(45deg)
+
+  &.\\+rotate-90
+    transform: rotate(90deg)
+
+  &.\\+rotate-180
+    transform: rotate(180deg)
+
+  &.\\+rotate-270
+    transform: rotate(270deg)
+
+// color modifiers
+  &.\\+black
+    fill: $black
+
+  &.\\+white
+    fill: $white
+
+  &.\\+primary
+    fill: $primary
+
+  &.\\+secondary
+    fill: $secondary
+
+  &.\\+tertiary
+    fill: $tertiary
