@@ -12,7 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/dabellator/React-Project.git"
   },
-  "author": "Jordan Bundy <jordan@helpfulhuman.com>",
+  "author": "Jordan Bundy <jordan@helpfulhuman.com>,
+            Ryan Canfield <ryan.c@helpfulhuman.com>
+            Josh Brunner <josh@helpfulhuman.com>", 
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/dabellator/React-Project/issues"
