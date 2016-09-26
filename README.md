@@ -1,8 +1,8 @@
 # SHQ Git Guidelines
-When working on a service, here are the guidelines for working with git.
+When working on this repo, here are the guidelines for working with git.
 
 
-- Fork the repo of the service you’ll be working on
+- Fork the repo
 - Clone your forked repo locally
     ```
     git clone <forked repo url>
