@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import store from './Services/Store';
 import { browserHistory } from 'react-router';
 import { Redirect, Router, Route, IndexRoute } from 'react-router';
-import { isLoggedIn, isGuest } from './Services/AuthMiddleware';
 
 // contexts
 import App from './Containers/App';
@@ -34,9 +33,7 @@ function getEnvironmentDependentRoutes() {
     <Provider store={store}>
       <Router history={browserHistory}>
         <Route component={App}>
-          <Route onEnter={isGuest(store)}>
-            <Route path='/' component={HomePage} />
-          </Route>
+          <Route path='/' component={HomePage} />
           {getEnvironmentDependentRoutes()}
         </Route>
       </Router>

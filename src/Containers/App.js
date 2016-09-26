@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import App from '../Components/App';
 
-import { createUser, loginUser, checkUser, logOut } from '../Actions/Users';
+import { testDB } from '../Actions/Entity';
+import { createUser, loginUser, checkUser, logOut } from '../Services/Firebase';
 
 /**
  * Cherry pick values out of the given state model and choose which
@@ -23,6 +24,9 @@ function mapStateToProps (state) {
  */
 function mapDispatchToProps (dispatch) {
   return {
+    testDB: () => {testDB()},
+
+
     createUser: (e) => {
       e.preventDefault();
       createUser(e.target.email.value, e.target.pass.value)
