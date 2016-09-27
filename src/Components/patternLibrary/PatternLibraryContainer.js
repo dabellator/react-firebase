@@ -1,5 +1,9 @@
 import { connect } from 'react-redux';
 import PatternLibrary from './PatternLibrary';
+import * as Auth from '../../Actions/Auth';
+import * as Entity from '../../Actions/Entity';
+import * as Identity from '../../Actions/Identity';
+import * as Notification from '../../Actions/Notification';
 
 /**
  * Cherry pick values out of the given state model and choose which
@@ -20,7 +24,14 @@ function mapStateToProps (state) {
  * @return {Object}
  */
 function mapDispatchToProps (dispatch) {
-  return {};
+  return {
+    Actions: {
+      ...Auth,
+      ...Entity,
+      ...Identity,
+      ...Notification
+    }
+  };
 }
 
 /**

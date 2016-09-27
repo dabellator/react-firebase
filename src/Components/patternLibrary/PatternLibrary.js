@@ -4,6 +4,7 @@ import DrawerMenu from './DrawerMenu';
 import TypographySection from './sections/Typography';
 import IconSection from './sections/Icons';
 import GridSection from './sections/Grid';
+import Backend from './sections/Backend'
 import Icon from '../icon/Icon';
 
 class PatternLibrary extends React.Component {
@@ -31,7 +32,8 @@ class PatternLibrary extends React.Component {
     return [
       TypographySection,
       IconSection,
-      GridSection
+      GridSection,
+      Backend
     ];
   }
 
@@ -40,7 +42,7 @@ class PatternLibrary extends React.Component {
 
     return this.getComponentConstructors().map((Page, index) => {
       if (section === 'all' || section === Page.displayName) {
-        return <Page key={index} />;
+        return <Page key={index} {...this.props}/>;
       }
       return undefined;
     });
