@@ -24,13 +24,22 @@ function mapStateToProps (state) {
  * @return {Object}
  */
 function mapDispatchToProps (dispatch) {
+  
+  let actions = {
+    ...Auth,
+    ...Entity,
+    ...Identity,
+    ...Notification
+  }
+
+  let newActions = {}
+
+  for (let key in actions) {
+    newActions[key] = () => actions[key](dispatch)
+  }
+
   return {
-    Actions: {
-      ...Auth,
-      ...Entity,
-      ...Identity,
-      ...Notification
-    }
+    actions: newActions
   };
 }
 
