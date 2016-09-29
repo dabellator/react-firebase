@@ -42,7 +42,7 @@ class PatternLibrary extends React.Component {
 
     return this.getComponentConstructors().map((Page, index) => {
       if (section === 'all' || section === Page.displayName) {
-        return <Page key={index} {...this.props}/>;
+        return <Page key={index} {...this.props} />;
       }
       return undefined;
     });

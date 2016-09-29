@@ -1,34 +1,26 @@
-export function createUser (email, password) {
+import { database } from '../Services/Firebase';
+
+export function createUser (firstName, lastName, email, password) {
   console.log('submit:', email, password);
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(err => {
-    console.log('troubles: ', err);
-  })
+  // TODO: need to figure out how to handle additional user info
+  // upon account creation: firstName, lastName, etc
+  database.createUser(email, password)
 }
 
 export function loginUser (email, password) {
-  firebase.auth().signInWithEmailAndPassword(email, password).catch(err => {
-    console.log('troubles: ', err);
-  })
+  database.loginUser(email, password)
 }
 
 export function checkUser () {
-  firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-      console.log('LOGGED IN: ', user);
-      firebase.database().ref('log/' + user.uid).set({
-        lastLogin: Date.now()
-      })
-    } else {
-      console.log('No one here');
-      firebase.database().ref('create/jb').set({
-        username: 'jb'
-      });
-    }
-  })
+  return dispatch => {
+    database.checkUser( user => {
+      dispatch({ type: 'LOGGED_IN', user })
+    }, () => {
+      dispatch({ type: 'NOT_LOGGED_IN'})
+    })
+  }
 }
 
 export function logOut () {
-  firebase.auth().signOut().then(() => {
-    console.log('SIGNED OUT');
-  })
+  database.logOut()
 }

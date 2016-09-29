@@ -7,9 +7,10 @@ const handleErr = function (err) {
 * Firebase Authentication Routes
 */
 
+// TODO: Add support for creating users with first and last name
 export function createUser (email, password) {
   console.log('submit:', email, password);
-  firebase.auth().createUserWithEmailAndPassword(email, password).catch(err => {
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch( err => {
     console.log('troubles: ', err);
   })
 }
@@ -21,10 +22,14 @@ export function loginUser (email, password) {
 }
 
 export function checkUser (userCb, noUserCb) {
+  console.log('checkUser called');
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
       console.log('LOGGED IN: ', user);
       userCb(user);
+      firebase.database().ref('log/' + user.uid).set({
+        lastLogin: Date.now()
+      })
     } else {
       console.log('No one here');
       noUserCb();
