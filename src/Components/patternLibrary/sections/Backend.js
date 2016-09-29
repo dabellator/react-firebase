@@ -9,10 +9,10 @@ class Backend extends React.Component {
     const actions = this.props.actions;
 
     for (let key in actions) {
-      buttons.push(<button key={key} onClick={actions[key]}>{key}</button>);
+      buttons.push(<div key={key}>{key}</div>);
     }
 
-    return buttons;
+    return buttons
   }
 
   render () {

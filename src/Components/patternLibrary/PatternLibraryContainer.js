@@ -31,15 +31,9 @@ function mapDispatchToProps (dispatch) {
     ...Identity,
     ...Notification
   }
-
-  let newActions = {}
-
-  for (let key in actions) {
-    newActions[key] = () => actions[key](dispatch)
-  }
-
+  
   return {
-    actions: newActions
+    actions
   };
 }
 
