@@ -37,10 +37,17 @@ export function checkUser (userCb, noUserCb) {
   })
 }
 
-export function logOut () {
+export function logoutUser () {
   firebase.auth().signOut().then(() => {
     console.log('SIGNED OUT');
   })
+}
+
+export const Auth = {
+  createUser,
+  loginUser,
+  checkUser,
+  logoutUser
 }
 
 /*
@@ -68,7 +75,7 @@ export function remove (path, cb) {
   firebase.database().ref(path).remove().then(cb).catch(handleErr);
 };
 
-export const database = {
+export const Database = {
   read,
   listen,
   create,

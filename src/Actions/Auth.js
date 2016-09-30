@@ -1,19 +1,19 @@
-import { database } from '../Services/Firebase';
+import { Auth } from '../Services/Firebase';
 
 export function createUser (firstName, lastName, email, password) {
   console.log('submit:', email, password);
   // TODO: need to figure out how to handle additional user info
   // upon account creation: firstName, lastName, etc
-  database.createUser(email, password)
+  Auth.createUser(email, password)
 }
 
 export function loginUser (email, password) {
-  database.loginUser(email, password)
+  Auth.loginUser(email, password)
 }
 
 export function checkUser () {
   return dispatch => {
-    database.checkUser( user => {
+    Auth.checkUser( user => {
       dispatch({ type: 'LOGGED_IN', user })
     }, () => {
       dispatch({ type: 'NOT_LOGGED_IN'})
@@ -21,6 +21,6 @@ export function checkUser () {
   }
 }
 
-export function logOut () {
-  database.logOut()
+export function logoutUser () {
+  Auth.logoutUser()
 }
